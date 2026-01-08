@@ -22,7 +22,7 @@ def predict(data:EmployeeTerm):
 
     return{
         "Predicted_Termination":int(prediction),
-        "Status":"Termination" if prediction == 1 else "Active",
+        "Status": "Termination" if prediction == 1 else "Active",
         "Probability":{
             "Active":prob[0],
             "Terminated":prob[1]
