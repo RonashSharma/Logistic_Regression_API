@@ -2,9 +2,9 @@ import streamlit as st
 import requests
 import pandas as pd 
 
-API_URL="https://logistic-regression-api-1-vtx3.onrender.com/predict"
+API_URL = "https://logistic-regression-api-1-vtx3.onrender.com/predict"
 
-emp_Satisfaction = st.slider(
+emp_satisfaction = st.slider(
     'Employee Satisfaction',
     min_value=1,
     max_value=5,
@@ -12,9 +12,9 @@ emp_Satisfaction = st.slider(
     step=1
 )
 
-if st.button("Predict Termination"):
+if st.button("Predict Employee Termination or Active "):
     payload={
-        "EmpSatisfaction":emp_Satisfaction
+        "EmpSatisfaction":emp_satisfaction
     }
 
     try:
@@ -30,5 +30,5 @@ if st.button("Predict Termination"):
         else:
             st.warning("API ERROR !!")
     except requests.expectaions.RequestException:
-        st.error("Could not connect")
+        st.error("Could not connect API ")
 
