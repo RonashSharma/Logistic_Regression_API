@@ -1,4 +1,4 @@
 pandas
-sckit-learn
-numpy
+scikit-learn
+fastapi
 joblib
